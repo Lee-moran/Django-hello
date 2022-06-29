@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'codestar.wsgi.application'
+WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 
 # Database
