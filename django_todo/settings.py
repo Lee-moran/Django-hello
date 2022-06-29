@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os
+import os 
 from pathlib import Path
 import dj_database_url
+ 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECERT_KEY','django-insecure-g(3!3*3wl5^l^3jt0xp9ls40sqsrdf6d^odxb3(=_26c=_nrjz')
+SECRET_KEY = os.environ.get('SECERT_KEY', 'django-insecure-g(3!3*3wl5^l^3jt0xp9ls40sqsrdf6d^odxb3(=_26c=_nrjz')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-hello-todo-app.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['django-hello-todo-app.herokuapp.com', os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
